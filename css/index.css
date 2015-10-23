@@ -1,0 +1,33 @@
+/* --- LAYOUT / GENERAL --- */
+
+body {
+    min-width: 250px;
+}
+
+#west-temp-slider{
+    width: 50%;
+    margin: auto;
+}
+
+#east-temp-slider{
+    width: 50%;
+    margin: auto;
+}
+
+#westTemp{
+    border:0;
+    color:#f6931f;
+    font-weight:bold;
+    width: 40px;
+}
+
+#eastTemp{
+    border:0;
+    color:#f6931f;
+    font-weight:bold;
+    width: 40px;
+}
+
+.temperature-value{
+    margin-left: 25%;
+}

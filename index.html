@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Home Automation">
+    <meta name="author" content="Jia">
+
+    <title>House Automation</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="libs/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+    <!-- Custom CSS -->
+    <link href="css/logo-nav.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/index.css"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">
+                <img src="images/home-logo.png" id="home-logo" alt="logo">
+            </a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a data-toggle="modal" data-target="#modalInstructions">Instructions</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="modal fade" id="modalInstructions" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Instructions</h4>
+            </div>
+            <div class="modal-body">
+                <ol>
+                    <li>Click the
+                        <svg width="24" height="24">
+                            <circle fill="none" stroke="#715725" stroke-width="12" cx="12" cy="12" r="4"></circle>
+                        </svg>
+                        to turn the lighs on/off in a room.
+                        <ol>
+                            <li>The lights will temporarily sit in an intermediary state while we wait for a response from the server</li>
+                        </ol>
+                    </li>
+                    <li>Adjust the temperature in the east/west wing by moving the slider.</li>
+                </ol>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Page Content -->
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <table  style="width: 100%;">
+                <tr>
+                    <td colspan="2">
+                            <object style="display: none;" id="house-svg" type="image/svg+xml" data="images/house.svg"></object>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div id="west-temp-slider"></div>
+                        <div class="temperature-value">West Temp: <input type="text" id="westTemp" readonly/></div>
+                    </td>
+                    <td>
+                        <div id="east-temp-slider"></div>
+                        <div class="temperature-value">East Temp: <input type="text" id="eastTemp" readonly/></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src='libs/jquery/jquery.min.js'></script>
+<script src="libs/jquery/jquery-ui.js"></script>
+<script src="js/houseMain.js"></script>
+<script src="js/constants.js"></script>
+<script src="js/homeLights.js"></script>
+<script src="js/homeTemperature.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="libs/bootstrap/bootstrap.min.js"></script>
+
+</body>
+
+</html>

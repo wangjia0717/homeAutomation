@@ -1,0 +1,36 @@
+body {
+    padding-top: 70px;/* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+}
+
+
+.container {
+    min-width:250px;
+}
+
+#home-logo{
+    width: 150px;
+    height: 100%;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+}
+
+@media(min-width:768px) {
+    body {
+        padding-top: 100px; /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+    }
+
+    #home-logo{
+        width: 150px;
+        height: 60px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+    }
+}

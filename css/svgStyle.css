@@ -1,0 +1,8 @@
+/* bootstrap already defines invisible */
+svg {
+    display: block;
+}
+
+.almost-invisible {
+    opacity: 0;
+}
